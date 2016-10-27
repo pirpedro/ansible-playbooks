@@ -1,0 +1,5 @@
+network_wireless_ssid: "{{vault_network_ssid}}"
+network_wireless_passkey: "{{vault_network_passkey}}"
+
+host:
+  user: "{{vault_host_user}}"

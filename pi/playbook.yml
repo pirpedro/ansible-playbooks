@@ -1,0 +1,24 @@
+---
+- hosts: raspberry
+  vars_files:
+    - vars/vars.yml
+    - vars/vault.yml
+
+#  pre_tasks:
+#    - name: 'Update APT'
+#      apt: update_cache=yes
+#      become: true
+#      become_method: sudo
+#      register: apt_out
+#    - name: 'Upgrade APT'
+#      apt: upgrade=safe
+#      become: true
+#      become_method: sudo
+#      register: apt_out
+  tasks:
+
+  #  - debug: var=apt_out
+  #  - debug: msg="Testando variaveis {{ network.wireless.auth }}"
+  roles:
+    - pirpedro.raspbian
+  remote_user: "{{ host.user }}"
